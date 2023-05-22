@@ -3,6 +3,7 @@ WORKDIR "/app"
 
 RUN apk add php-cli
 RUN apk add git
+RUN apk add mysql-client
 
 RUN apk add --no-cache --update --virtual buildDeps autoconf \
      && apk add build-base \
