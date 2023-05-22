@@ -30,7 +30,7 @@ FOR UPDATE
     $query = '
 INSERT INTO visit(ip, user_agent, page_url, view_date, views_count)
 VALUE(:ip, :user_agent, :page_url, NOW(), 1)
-ON DUPLICATE KEY UPDATE views_count = views_count + 1;
+ON DUPLICATE KEY UPDATE view_date = NOW(), views_count = views_count + 1;
 ';
     $preparedStatement = (new QueryExecutor($client))->execute($query, [
         'ip' => ip2long($visitorConfig->getIp()),
