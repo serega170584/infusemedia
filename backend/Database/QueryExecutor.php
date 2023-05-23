@@ -10,6 +10,7 @@ final class QueryExecutor implements QueryExecutorInterface
     public function execute(string $query, array $params = []): PDOStatement|bool
     {
         $preparedStatement = $this->client->prepare($query);
-        return $preparedStatement->execute($params);
+        $preparedStatement->execute($params);
+        return $preparedStatement;
     }
 }
