@@ -15,7 +15,8 @@ infusemedia
 
 
         mysql -h db --user=root --password=secret infusemedia < dump.sql
+- External host for mysql - localhost:3300, user - root, password - secret, database - infusemedia
 
-- Visit pages http://localhost:3100/index1.html and http://localhost:3100/index1.html and we can see view_count changes in table visit.
+- Visit pages http://localhost:3100/index1.html and http://localhost:3100/index2.html and we can see view_count changes in table visit.
 
 - We can see files index1.html and index2.html inside frontend directory. banner.php and dump.sql with other code files inside backend directory.
