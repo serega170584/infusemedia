@@ -4,17 +4,17 @@ infusemedia
 - Deploy environment
 
     
-    docker-compose build --no-cache && docker-compose up  
+        docker-compose build --no-cache && docker-compose up  
 
 - Enter inside container
 
   
-    docker-compose exec backend sh
+        docker-compose exec backend sh
 
 - Upload database through dump file
 
 
-    mysql -h db --user=root --password=secret infusemedia < dump.sql
+        mysql -h db --user=root --password=secret infusemedia < dump.sql
 
 - Visit pages http://localhost:3100/index1.html and http://localhost:3100/index1.html and we can see view_count changes in table visit.
 
